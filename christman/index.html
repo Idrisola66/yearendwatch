@@ -1,0 +1,1913 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YearEnd FBWatch | Holiday Relief, Rolling Grants & 211 Community Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            evergreen: {
+              950: '#f8fafc',
+              900: '#ffffff',
+              800: '#eff6ff',
+              700: '#dbeafe',
+            },
+            champagne: {
+              200: '#dbeafe',
+              300: '#2563eb',
+              400: '#1d4ed8',
+              500: '#1e40af',
+            },
+            crimson: {
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#1e3a8a',
+            }
+          },
+          animation: {
+            'flash-pulse': 'flashPulse 3s infinite ease-in-out',
+            'shimmer': 'shimmer 2.5s linear infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            flashPulse: {
+              '0%, 100%': { opacity: '0.25', transform: 'scale(0.95)' },
+              '50%': { opacity: '0.85', transform: 'scale(1.08)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Crisp Blue & White Surface Theme with Festive Christmas Lights Backdrop */
+    body {
+      background-color: #f8fafc;
+      color: #0f172a;
+      overflow-x: hidden;
+      background-image:
+        linear-gradient(to bottom, rgba(248, 250, 252, 0.88), rgba(239, 246, 255, 0.92)),
+        url('https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&w=1800&q=80');
+      background-size: cover;
+      background-position: center top;
+      background-attachment: fixed;
+    }
+
+    .festive-mesh {
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(37, 99, 235, 0.10) 0%, transparent 45%),
+        radial-gradient(circle at 85% 20%, rgba(220, 38, 38, 0.07) 0%, transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(219, 234, 254, 0.55) 0%, transparent 60%);
+    }
+
+    /* Christmas String Lights & Garland Border */
+    @keyframes twinkleLights {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(0.85); }
+    }
+    .xmas-bulb {
+      animation: twinkleLights 1.8s infinite ease-in-out;
+    }
+    .xmas-bulb:nth-child(odd) {
+      animation-delay: 0.9s;
+    }
+
+    /* Classic Attention-Grabbing World Crest Animation */
+    @keyframes classicWorldGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.45), 0 4px 14px rgba(30, 58, 138, 0.25); transform: scale(1); }
+      50% { box-shadow: 0 0 0 6px rgba(37, 99, 235, 0), 0 6px 20px rgba(217, 119, 6, 0.35); transform: scale(1.03); }
+    }
+    .classic-world-crest {
+      animation: classicWorldGlow 3s infinite ease-in-out;
+    }
+
+    /* High-contrast Blue & White surface overrides */
+    .text-white { color: #0f172a !important; }
+    .text-slate-200 { color: #1e293b !important; }
+    .text-slate-300 { color: #334155 !important; }
+    .text-slate-400 { color: #64748b !important; }
+    .text-emerald-300 { color: #1d4ed8 !important; }
+    .text-emerald-400 { color: #2563eb !important; }
+    .bg-white\/5 { background-color: rgba(239, 246, 255, 0.9) !important; }
+    .bg-white\/10 { background-color: rgba(219, 234, 254, 0.85) !important; }
+    .border-white\/10 { border-color: rgba(37, 99, 235, 0.18) !important; }
+    .border-white\/15 { border-color: rgba(37, 99, 235, 0.25) !important; }
+
+    /* Christmas Paparazzi Camera Flash Hover Effect */
+    .paparazzi-card {
+      position: relative;
+      overflow: hidden;
+      background-color: #ffffff;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .paparazzi-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(191, 219, 254, 0.55) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(25deg);
+      transition: all 0.65s ease;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .paparazzi-card:hover::before {
+      left: 130%;
+    }
+
+    .paparazzi-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -15px rgba(29, 78, 216, 0.22), 0 0 20px rgba(59, 130, 246, 0.14);
+      border-color: rgba(29, 78, 216, 0.55);
+    }
+
+    /* Camera flash burst animation triggered on spotlight click */
+    @keyframes cameraBurst {
+      0% { opacity: 0.95; transform: scale(0.4); }
+      100% { opacity: 0; transform: scale(2.4); }
+    }
+    .flash-burst {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(147,197,253,0.65) 40%, transparent 75%);
+      pointer-events: none;
+      animation: cameraBurst 0.55s ease-out forwards;
+      z-index: 30;
+    }
+
+    /* Snowfall particle canvas */
+    #snow-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 40;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #eff6ff;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #93c5fd;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+<body class="festive-mesh antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- Ambient Snow & Blue Sparkle Particle Canvas -->
+  <canvas id="snow-canvas"></canvas>
+
+  <!-- Toast Notification Banner (Replaces alert()) -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-sm w-full pointer-events-none px-4 sm:px-0"></div>
+
+  <!-- Top Holiday Announcement Bar -->
+  <div class="bg-gradient-to-r from-blue-900 via-red-700 to-blue-800 border-b border-blue-300/40 text-white text-xs sm:text-sm py-2 px-4 relative z-30">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1 bg-white text-red-700 font-extrabold px-2.5 py-0.5 rounded-full text-[11px] uppercase tracking-wider shadow-sm">
+          <i class="fa-solid fa-sleigh"></i> Merry Christmas Drive
+        </span>
+        <span class="font-medium !text-white">🎄 2026 Christmas Relief &amp; Rolling Grants Open Worldwide — Every Country Eligible!</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <a href="#agent-whatsapp" class="underline decoration-blue-200 hover:!text-blue-100 !text-white font-semibold">
+          <i class="fa-brands fa-whatsapp mr-1"></i>Agent in Charge WhatsApp
+        </a>
+        <button id="toggle-snow-btn" class="!text-blue-100 hover:!text-white transition flex items-center gap-1" title="Toggle Snowfall">
+          <i class="fa-regular fa-snowflake"></i> <span class="hidden sm:inline">Snow: On</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Festive Christmas String Lights Garland Bar -->
+  <div class="w-full bg-white/90 border-b border-blue-200 py-1.5 px-2 overflow-hidden relative z-30" aria-hidden="true">
+    <div class="max-w-7xl mx-auto flex items-center justify-around text-xs sm:text-sm">
+      <span class="xmas-bulb text-red-600"><i class="fa-solid fa-lightbulb"></i></span>
+      <span class="xmas-bulb text-blue-600"><i class="fa-solid fa-snowflake"></i></span>
+      <span class="xmas-bulb text-emerald-600"><i class="fa-solid fa-tree"></i></span>
+      <span class="xmas-bulb text-amber-500"><i class="fa-solid fa-star"></i></span>
+      <span class="xmas-bulb text-red-600"><i class="fa-solid fa-candy-cane"></i></span>
+      <span class="xmas-bulb text-blue-600"><i class="fa-solid fa-gift"></i></span>
+      <span class="xmas-bulb text-emerald-600"><i class="fa-solid fa-holly-berry"></i></span>
+      <span class="xmas-bulb text-amber-500"><i class="fa-solid fa-bell"></i></span>
+      <span class="xmas-bulb text-red-600 hidden sm:inline"><i class="fa-solid fa-lightbulb"></i></span>
+      <span class="xmas-bulb text-blue-600 hidden sm:inline"><i class="fa-solid fa-snowflake"></i></span>
+      <span class="xmas-bulb text-emerald-600 hidden md:inline"><i class="fa-solid fa-tree"></i></span>
+      <span class="xmas-bulb text-amber-500 hidden md:inline"><i class="fa-solid fa-star"></i></span>
+      <span class="xmas-bulb text-red-600 hidden lg:inline"><i class="fa-solid fa-gift"></i></span>
+      <span class="xmas-bulb text-blue-600 hidden lg:inline"><i class="fa-solid fa-sleigh"></i></span>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-30 backdrop-blur-xl bg-white/95 border-b border-blue-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3.5 flex items-center justify-between gap-4">
+      <!-- Brand Identity -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 via-blue-700 to-sky-500 p-0.5 shadow-lg shadow-blue-500/20">
+          <div class="w-full h-full bg-white rounded-[10px] flex items-center justify-center text-blue-700 group-hover:scale-105 transition">
+            <i class="fa-solid fa-hand-holding-heart text-lg"></i>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="font-serif font-bold text-xl tracking-tight text-slate-900">YearEnd <span class="text-blue-700">FBWatch</span></span>
+          </div>
+          <p class="text-[11px] text-blue-700 font-semibold tracking-wide uppercase">Worldwide Grants • Global Relief • 211 Hub</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-5 text-sm font-semibold text-slate-700">
+        <a href="#paparazzi-spotlight" class="hover:text-blue-700 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-camera-retro text-blue-600 text-xs"></i> Christmas Paparazzi
+        </a>
+        <a href="#award-gallery" class="hover:text-blue-700 transition">Award Moments</a>
+        <a href="#grant-directory" class="hover:text-blue-700 transition">Global Grants</a>
+        <a href="#testimonials-section" class="hover:text-blue-700 transition">Testimonials</a>
+        <a href="#agent-whatsapp" class="hover:text-blue-700 transition">Agent WhatsApp</a>
+        <button id="open-saved-btn" class="hover:text-blue-700 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-bookmark text-blue-600"></i> Saved
+          <span id="saved-count-badge" class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-0.5 rounded-full">0</span>
+        </button>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-2.5">
+        <button onclick="openShareModal()" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 border border-blue-200 text-xs sm:text-sm font-semibold text-blue-800 transition">
+          <i class="fa-solid fa-plus text-blue-600"></i> Share a Resource
+        </button>
+        <button onclick="openApplyModal()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 !text-white font-extrabold text-xs sm:text-sm shadow-lg shadow-blue-600/25 transition">
+          <span class="!text-white">Apply Now</span>
+          <i class="fa-solid fa-arrow-right text-xs !text-white"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-10 pb-14 sm:pt-16 sm:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-blue-200/70" style="background-image: linear-gradient(135deg, rgba(239, 246, 255, 0.92), rgba(255, 255, 255, 0.94), rgba(219, 234, 254, 0.88)), url('https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center;">
+    <!-- Decorative Holiday Orbs & Christmas Tree Corner Accents -->
+    <div class="absolute top-6 left-6 text-red-600/20 text-5xl sm:text-7xl pointer-events-none select-none"><i class="fa-solid fa-holly-berry"></i></div>
+    <div class="absolute top-6 right-6 text-emerald-700/20 text-5xl sm:text-7xl pointer-events-none select-none"><i class="fa-solid fa-tree"></i></div>
+    <div class="absolute top-12 left-10 w-64 h-64 bg-blue-400/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-6 right-10 w-80 h-80 bg-red-300/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center max-w-4xl mx-auto">
+        <!-- Classic Attention-Drawing Global Crest Pill -->
+        <div class="classic-world-crest inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 border-2 border-amber-400 !text-white text-xs sm:text-sm font-bold mb-6 shadow-lg">
+          <span class="w-7 h-7 rounded-full bg-gradient-to-br from-amber-300 via-amber-400 to-amber-600 text-blue-950 flex items-center justify-center shadow-inner shrink-0">
+            <i class="fa-solid fa-earth-americas text-sm"></i>
+          </span>
+          <span class="!text-white tracking-wide">100% WORLDWIDE CHRISTMAS ELIGIBILITY • ALL 195+ NATIONS • 211 RELIEF</span>
+          <i class="fa-solid fa-crown text-amber-300 text-xs"></i>
+        </div>
+
+        <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-tight mb-5">
+          🎄 YearEnd FBWatch Grants, Christmas Relief &amp;
+          <span class="bg-gradient-to-r from-blue-700 via-red-600 to-blue-600 bg-clip-text text-transparent">
+            Global Community Hub
+          </span>
+        </h1>
+
+        <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+          Connecting <strong class="text-white">individuals, students, artists, small businesses, and community projects</strong> across <span class="text-champagne-300 font-semibold">every nation around the world</span> with rolling grant packages, hardship aid, shared equipment, and instant local helpline referrals.
+        </p>
+
+        <!-- Primary Search Bar -->
+        <div class="max-w-3xl mx-auto bg-evergreen-900/90 backdrop-blur-xl p-2 rounded-2xl border border-champagne-400/35 shadow-2xl shadow-black/50 flex flex-col sm:flex-row gap-2">
+          <div class="relative flex-1 flex items-center">
+            <i class="fa-solid fa-magnifying-glass text-champagne-400 ml-4 mr-3"></i>
+            <input
+              type="text"
+              id="hero-search-input"
+              placeholder="Search global rolling grants, winter hardship relief, student tech, artist packages..."
+              class="w-full bg-transparent text-white placeholder-slate-400 text-sm sm:text-base py-3 pr-4 focus:outline-none"
+            />
+            <button id="clear-search-btn" class="hidden text-slate-400 hover:text-white px-3" title="Clear search">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <button onclick="scrollToDirectory()" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 !text-white font-bold text-sm sm:text-base shadow-lg shadow-blue-600/25 transition flex items-center justify-center gap-2 shrink-0">
+            <i class="fa-solid fa-wand-magic-sparkles !text-white"></i>
+            <span class="!text-white">Explore Worldwide Grants</span>
+          </button>
+        </div>
+
+        <!-- Quick Trust & Impact Metrics -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 max-w-4xl mx-auto mt-10 pt-8 border-t border-blue-200">
+          <div class="bg-white rounded-2xl p-4 border-2 border-amber-400/70 shadow-md relative overflow-hidden">
+            <div class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-blue-800 to-blue-600 text-amber-300 mb-1.5 shadow">
+              <i class="fa-solid fa-globe text-base"></i>
+            </div>
+            <div class="text-xl sm:text-2xl font-extrabold text-blue-800">195+ Nations</div>
+            <div class="text-xs font-semibold text-amber-700 mt-0.5">Classic Worldwide Crest</div>
+          </div>
+          <div class="bg-white rounded-2xl p-4 border border-blue-100 shadow-sm">
+            <div class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-blue-100 text-blue-700 mb-1.5">
+              <i class="fa-solid fa-award text-base"></i>
+            </div>
+            <div class="text-xl sm:text-2xl font-extrabold text-sky-700">Full Backing</div>
+            <div class="text-xs text-slate-600 mt-0.5">Rolling Project &amp; Relief Packages</div>
+          </div>
+          <div class="bg-white rounded-2xl p-4 border border-blue-100 shadow-sm">
+            <div class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-blue-100 text-blue-700 mb-1.5">
+              <i class="fa-solid fa-phone-volume text-base"></i>
+            </div>
+            <div class="text-xl sm:text-2xl font-extrabold text-blue-800">24/7 Global Link</div>
+            <div class="text-xs text-slate-600 mt-0.5">211 &amp; Local Crisis Referrals</div>
+          </div>
+          <div class="bg-white rounded-2xl p-4 border border-blue-100 shadow-sm">
+            <div class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-blue-100 text-blue-700 mb-1.5">
+              <i class="fa-solid fa-bolt text-base"></i>
+            </div>
+            <div class="text-xl sm:text-2xl font-extrabold text-blue-600">5-Min Apply</div>
+            <div class="text-xs text-slate-600 mt-0.5">Zero-Fee Streamlined Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHRISTMAS PAPARAZZI SPOTLIGHT SECTION -->
+  <section id="paparazzi-spotlight" class="py-12 px-4 sm:px-6 lg:px-8 relative">
+    <div class="max-w-7xl mx-auto">
+      <!-- Paparazzi Header Banner -->
+      <div class="rounded-3xl border-2 border-blue-200 p-6 sm:p-8 shadow-xl relative overflow-hidden" style="background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(239, 246, 255, 0.92)), url('https://images.unsplash.com/photo-1576919228236-a097c32a5cd4?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center;">
+        <!-- Studio Flashbulbs Decoration -->
+        <div class="absolute -top-6 right-12 w-24 h-24 rounded-full bg-blue-300/30 blur-xl animate-flash-pulse pointer-events-none"></div>
+        <div class="absolute bottom-2 left-1/3 w-20 h-20 rounded-full bg-sky-300/30 blur-xl animate-flash-pulse pointer-events-none" style="animation-delay: 1.4s;"></div>
+
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-7 relative z-10">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-700 !text-white font-extrabold text-xs uppercase tracking-wider mb-2 shadow">
+              <i class="fa-solid fa-camera-retro animate-bounce !text-white"></i> Christmas Paparazzi Spotlight
+            </div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900">
+              Trending Year-End Relief &amp; Viral Holiday Drives
+            </h2>
+            <p class="text-slate-600 text-sm mt-1">
+              In the festive spotlight this week—click any flashbulb badge for an instant spotlight burst before year-end allocations close!
+            </p>
+          </div>
+          <div class="flex items-center gap-2 self-start lg:self-end">
+            <button onclick="triggerPaparazziShow()" class="px-4 py-2.5 rounded-xl bg-blue-700 hover:bg-blue-600 !text-white text-xs sm:text-sm font-bold transition flex items-center gap-2 shadow">
+              <i class="fa-solid fa-bolt !text-white"></i> Flash Spotlight
+            </button>
+          </div>
+        </div>
+
+        <!-- Featured Holiday Hearth & Winter Hardship Relief Grant Card inside Trending Year-End Relief -->
+        <div id="paparazzi-grid" class="grid grid-cols-1 gap-5 relative z-10">
+          <!-- Populated dynamically via JS with Holiday Hearth & Winter Hardship Relief Grant -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHRISTMAS PAPARAZZI PHOTO GALLERY: HAPPY RECIPIENTS & CHECK HANDOVERS -->
+  <section id="award-gallery" class="py-12 px-4 sm:px-6 lg:px-8 relative" style="background-image: linear-gradient(135deg, rgba(248, 250, 252, 0.90), rgba(239, 246, 255, 0.92)), url('https://images.unsplash.com/photo-1513297887119-d46091b24bfa?auto=format&fit=crop&w=1800&q=80'); background-size: cover; background-position: center;">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-champagne-400/15 border border-champagne-400/40 text-champagne-300 text-xs font-bold uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-camera-retro"></i> Official Award Handovers &amp; Celebrations
+          </div>
+          <h2 class="font-serif text-2xl sm:text-4xl font-bold text-white">
+            Smiles Across the World: Check Presentations &amp; Happy Recipients
+          </h2>
+          <p class="text-slate-300 text-sm mt-1 max-w-2xl">
+            Captured by our Christmas Paparazzi team—real moments of program officials presenting ceremonial grant checks and community leaders celebrating year-end approvals around the globe.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4-Card Photographic & Ceremonial Check Presentation Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        
+        <!-- Photo Card 1: Official Handing Check to Recipient -->
+        <div onclick="createCameraFlash(event, this)" class="paparazzi-card rounded-2xl bg-white border border-blue-200 overflow-hidden flex flex-col cursor-pointer group shadow-md">
+          <div class="relative h-56 overflow-hidden bg-blue-900">
+            <img
+              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80"
+              onerror="this.src='https://placehold.co/800x550/1e3a8a/ffffff?text=Official+Check+Handover'"
+              alt="Program official handing ceremonial check to recipient"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-blue-700 !text-white text-[10px] font-bold uppercase tracking-wider shadow">
+              <i class="fa-solid fa-award mr-1 !text-white"></i> Official Check Handover
+            </span>
+            <!-- Ceremonial Award Check Overlay Badge -->
+            <div class="absolute bottom-3 left-3 right-3 bg-white/95 text-slate-900 rounded-xl p-2.5 shadow-lg border border-blue-300">
+              <div class="flex items-center justify-between text-[9px] font-extrabold uppercase tracking-wider border-b border-blue-200 pb-1">
+                <span class="text-blue-800">YearEnd FBWatch Official Award</span>
+                <span class="text-blue-700"><i class="fa-solid fa-check-double"></i> Verified</span>
+              </div>
+              <div class="text-xs font-serif font-bold mt-1 text-slate-900">Pay to: Community Resilience Fellow</div>
+              <div class="text-[10px] font-semibold text-blue-700">Full Year-End Project &amp; Relief Grant</div>
+            </div>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-white text-sm mb-1">Director Presenting Year-End Award Check</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Regional Grant Director David Mensah officially hands over a signed year-end community grant certificate and ceremonial check during the winter gala.
+              </p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-white/10 flex items-center justify-between text-[11px] text-champagne-300 font-semibold">
+              <span class="inline-flex items-center gap-1.5 text-blue-800"><span class="w-4 h-4 rounded-full bg-amber-400 text-blue-950 inline-flex items-center justify-center text-[9px]"><i class="fa-solid fa-earth-americas"></i></span> Global Fellowship Drive</span>
+              <span>📸 Click to Flash</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo Card 2: Happy Recipient Holding Ceremonial Check -->
+        <div onclick="createCameraFlash(event, this)" class="paparazzi-card rounded-2xl bg-evergreen-900/80 border border-champagne-400/30 overflow-hidden flex flex-col cursor-pointer group">
+          <div class="relative h-56 overflow-hidden bg-blue-900">
+            <img
+              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80"
+              onerror="this.src='https://placehold.co/800x550/1e40af/ffffff?text=Happy+Recipient+Holding+Check'"
+              alt="Happy recipient smiling while holding grant award check"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-champagne-400 !text-white text-[10px] font-extrabold uppercase tracking-wider shadow">
+              <i class="fa-solid fa-star mr-1 !text-white"></i> Recipient Holding Check
+            </span>
+            <!-- Ceremonial Award Check Overlay Badge -->
+            <div class="absolute bottom-3 left-3 right-3 bg-white/95 text-evergreen-950 rounded-xl p-2.5 shadow-lg border border-champagne-400">
+              <div class="flex items-center justify-between text-[9px] font-extrabold uppercase tracking-wider border-b border-evergreen-950/20 pb-1">
+                <span>Holiday Small Business Boost</span>
+                <span>No. 2026-884</span>
+              </div>
+              <div class="text-xs font-serif font-bold mt-1">Pay to: Amara &amp; Cooperative Bakery</div>
+              <div class="text-[10px] font-semibold text-emerald-800">Full Equipment &amp; Winter Inventory Package</div>
+            </div>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-white text-sm mb-1">Amara Celebrating Her Business Grant Check</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                "Holding my ceremonial grant check felt unreal—within days our community bakery received full oven upgrades and winter supplies!"
+              </p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-white/10 flex items-center justify-between text-[11px] text-emerald-300">
+              <span><i class="fa-solid fa-location-dot mr-1"></i> Austin, USA</span>
+              <span>📸 Click to Flash</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo Card 3: Official Handing Check to Student & Artist -->
+        <div onclick="createCameraFlash(event, this)" class="paparazzi-card rounded-2xl bg-evergreen-900/80 border border-champagne-400/30 overflow-hidden flex flex-col cursor-pointer group">
+          <div class="relative h-56 overflow-hidden bg-blue-900">
+            <img
+              src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
+              onerror="this.src='https://placehold.co/800x550/0369a1/ffffff?text=Official+Award+Presentation'"
+              alt="Official presenting grant check and award certificate to creators"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-emerald-600 !text-white text-[10px] font-extrabold uppercase tracking-wider shadow">
+              <i class="fa-solid fa-handshake mr-1 !text-white"></i> Official Presentation
+            </span>
+            <!-- Ceremonial Award Check Overlay Badge -->
+            <div class="absolute bottom-3 left-3 right-3 bg-champagne-200/95 text-evergreen-950 rounded-xl p-2.5 shadow-lg border border-champagne-500">
+              <div class="flex items-center justify-between text-[9px] font-extrabold uppercase tracking-wider border-b border-evergreen-950/20 pb-1">
+                <span>Global Student &amp; Creator Catalyst</span>
+                <span>Rolling Award</span>
+              </div>
+              <div class="text-xs font-serif font-bold mt-1">Pay to: Youth Media &amp; Tech Lab</div>
+              <div class="text-[10px] font-semibold text-evergreen-800">Full Tuition Relief &amp; Laptop Suite</div>
+            </div>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-white text-sm mb-1">Official Presenting Student &amp; Tech Check</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Program coordinator Elena Alvarez presents an official year-end check and studio pass to student innovators launching a free digital literacy hub.
+              </p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-white/10 flex items-center justify-between text-[11px] text-champagne-300">
+              <span><i class="fa-solid fa-location-dot mr-1"></i> São Paulo, Brazil</span>
+              <span>📸 Click to Flash</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo Card 4: Happy Community Group Holding Check Together -->
+        <div onclick="createCameraFlash(event, this)" class="paparazzi-card rounded-2xl bg-evergreen-900/80 border border-champagne-400/30 overflow-hidden flex flex-col cursor-pointer group">
+          <div class="relative h-56 overflow-hidden bg-blue-900">
+            <img
+              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80"
+              onerror="this.src='https://placehold.co/800x550/1d4ed8/ffffff?text=Happy+Community+Recipients'"
+              alt="Happy group of community recipients celebrating grant award"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-red-600 !text-white text-[10px] font-bold uppercase tracking-wider shadow">
+              <i class="fa-solid fa-heart mr-1 !text-white"></i> Happy Recipients
+            </span>
+            <!-- Ceremonial Award Check Overlay Badge -->
+            <div class="absolute bottom-3 left-3 right-3 bg-white/95 text-evergreen-950 rounded-xl p-2.5 shadow-lg border border-champagne-400">
+              <div class="flex items-center justify-between text-[9px] font-extrabold uppercase tracking-wider border-b border-evergreen-950/20 pb-1">
+                <span>Neighborhood Warmth &amp; Pantry Grant</span>
+                <span>Approved</span>
+              </div>
+              <div class="text-xs font-serif font-bold mt-1">Pay to: Sunrise Mutual Aid Collective</div>
+              <div class="text-[10px] font-semibold text-emerald-800">Full Winter Food &amp; Housing Relief Pool</div>
+            </div>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-white text-sm mb-1">Volunteers &amp; Families Holding Their Check</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Smiles all around as neighborhood organizers hold up their year-end relief check funding warm meals and winter hardship aid for 300+ families.
+              </p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-white/10 flex items-center justify-between text-[11px] text-emerald-300">
+              <span><i class="fa-solid fa-location-dot mr-1"></i> Manila, Philippines</span>
+              <span>📸 Click to Flash</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN GRANT & OPPORTUNITY DIRECTORY -->
+  <section id="grant-directory" class="py-12 px-4 sm:px-6 lg:px-8 relative" style="background-image: linear-gradient(135deg, rgba(239, 246, 255, 0.91), rgba(255, 255, 255, 0.93)), url('https://images.unsplash.com/photo-1482517967863-00e15c9b44be?auto=format&fit=crop&w=1800&q=80'); background-size: cover; background-position: center;">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900 border border-amber-400 !text-amber-300 font-bold text-xs uppercase tracking-widest mb-2 shadow-sm">
+            <i class="fa-solid fa-earth-americas text-amber-300"></i>
+            <span>100% Worldwide Rolling Opportunities</span>
+          </div>
+          <h2 class="font-serif text-2xl sm:text-4xl font-bold text-white mt-1">
+            Global Grants, Shared Resources &amp; Relief Directory
+          </h2>
+        </div>
+        <div class="text-sm text-slate-300 flex items-center gap-3">
+          <span>Showing <strong id="results-count" class="text-champagne-300">1</strong> worldwide opportunity</span>
+          <button onclick="resetAllFilters()" class="text-xs px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 transition">
+            Reset Filters
+          </button>
+        </div>
+      </div>
+
+      <!-- Multi-Dimensional Filter Controls (Worldwide Focus) -->
+      <div class="bg-evergreen-900/75 backdrop-blur-md border border-white/10 rounded-2xl p-4 sm:p-6 mb-8 space-y-5">
+        <!-- Row 1: Global Program Scope -->
+        <div>
+          <label class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-900 mb-2.5">
+            <span class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-900 to-blue-700 text-amber-300 inline-flex items-center justify-center shadow-sm">
+              <i class="fa-solid fa-earth-americas text-xs"></i>
+            </span>
+            <span>1. Worldwide Program Scope (All Countries Eligible)</span>
+          </label>
+          <div class="flex flex-wrap gap-2" id="geo-filters">
+            <button data-geo="ALL" class="filter-pill-geo active px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-champagne-400 text-evergreen-950 shadow transition flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-amber-300 text-blue-950 inline-flex items-center justify-center text-[11px] shadow-sm"><i class="fa-solid fa-earth-americas"></i></span>
+              <span>All Worldwide Programs</span>
+            </button>
+            <button data-geo="Global Rolling" class="filter-pill-geo px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition flex items-center gap-2">
+              <i class="fa-solid fa-arrows-rotate text-blue-600"></i>
+              <span>Global Rolling Open</span>
+            </button>
+            <button data-geo="International Relief" class="filter-pill-geo px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition flex items-center gap-2">
+              <i class="fa-solid fa-hand-holding-heart text-red-600"></i>
+              <span>International Crisis &amp; Hardship</span>
+            </button>
+            <button data-geo="Universal Access" class="filter-pill-geo px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition flex items-center gap-2">
+              <i class="fa-solid fa-crown text-amber-500"></i>
+              <span>Universal Digital &amp; Studio Access</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Row 2 & 3 Grid: Applicant Type & Funding/Support Type -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 pt-2 border-t border-white/10">
+          <!-- Applicant Type -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-emerald-300 mb-2.5">
+              <i class="fa-solid fa-users mr-1.5"></i>2. Who Can Apply?
+            </label>
+            <div class="flex flex-wrap gap-2" id="applicant-filters">
+              <button data-applicant="ALL" class="filter-pill-app active px-3 py-1.5 rounded-xl text-xs font-semibold bg-emerald-400 text-evergreen-950 transition">
+                All Applicants
+              </button>
+              <button data-applicant="Individuals" class="filter-pill-app px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition">
+                Individuals &amp; Families
+              </button>
+              <button data-applicant="Students" class="filter-pill-app px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition">
+                Students
+              </button>
+              <button data-applicant="Artists" class="filter-pill-app px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition">
+                Artists &amp; Creators
+              </button>
+              <button data-applicant="Small Businesses" class="filter-pill-app px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition">
+                Small Businesses
+              </button>
+              <button data-applicant="Community Projects" class="filter-pill-app px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition">
+                Community Projects
+              </button>
+            </div>
+          </div>
+
+          <!-- Support / Funding Type -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-crimson-400 mb-2.5">
+              <i class="fa-solid fa-gift mr-1.5"></i>3. Support &amp; Resource Type
+            </label>
+            <div class="flex flex-wrap gap-2" id="support-filters">
+              <button data-support="ALL" class="filter-pill-sup active px-3 py-1.5 rounded-xl text-xs font-semibold bg-crimson-500 text-white transition">
+                All Support Types
+              </button>
+              <button data-support="Rolling Opportunities" class="filter-pill-sup px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition">
+                Rolling Opportunities
+              </button>
+              <button data-support="Hardship & Emergency Relief" class="filter-pill-sup px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition">
+                Hardship &amp; Emergency Relief
+              </button>
+              <button data-support="Project Grants" class="filter-pill-sup px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition">
+                Project Grants
+              </button>
+              <button data-support="Resource Sharing & Access" class="filter-pill-sup px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition">
+                Resource Sharing &amp; Access
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grant Cards Grid -->
+      <div id="grants-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered dynamically by JS -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="empty-state" class="hidden text-center py-16 px-4 bg-evergreen-900/50 rounded-3xl border border-white/10">
+        <div class="w-16 h-16 rounded-full bg-champagne-400/15 text-champagne-300 flex items-center justify-center mx-auto mb-4 text-2xl">
+          <i class="fa-regular fa-snowflake"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">No exact matches for that combination</h3>
+        <p class="text-slate-400 text-sm max-w-md mx-auto mb-6">
+          Try clearing one of your filters to view all worldwide rolling grants and open resource-sharing programs.
+        </p>
+        <button onclick="resetAllFilters()" class="px-5 py-2.5 rounded-xl bg-champagne-400 text-evergreen-950 font-bold text-sm hover:bg-champagne-300 transition">
+          Show All Worldwide Opportunities
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- HAPPY TESTIMONIALS & INTERACTIVE COMMUNITY COMMENTS SECTION -->
+  <section id="testimonials-section" class="py-14 px-4 sm:px-6 lg:px-8 relative" style="background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.90), rgba(239, 246, 255, 0.92)), url('https://images.unsplash.com/photo-1545048702-79362596cdc9?auto=format&fit=crop&w=1800&q=80'); background-size: cover; background-position: center;">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-400/15 border border-emerald-400/35 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-comments"></i> Happy Recipient Stories &amp; Live Comments
+        </div>
+        <h2 class="font-serif text-2xl sm:text-4xl font-bold text-white">
+          Voices of Joy from Recipients Around the World
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base mt-2">
+          Read inspiring testimonies from individuals, students, artists, and community leaders worldwide—and leave your own celebratory comment or story below!
+        </p>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div id="testimonials-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        <!-- Populated dynamically via JS -->
+      </div>
+
+      <!-- Interactive Leave a Testimonial / Comment Box -->
+      <div class="max-w-3xl mx-auto rounded-3xl bg-evergreen-900/85 border border-champagne-400/35 p-6 sm:p-8 shadow-2xl">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-champagne-400/20 text-champagne-300 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </div>
+          <div>
+            <h3 class="font-serif text-xl font-bold text-white">Share Your Happy Story or Community Comment</h3>
+            <p class="text-xs text-slate-300">Celebrate a grant approval, thank a local 211 helper, or encourage fellow applicants worldwide.</p>
+          </div>
+        </div>
+
+        <form id="testimonial-form" onsubmit="addCommunityComment(event)" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-slate-200 mb-1">Your Name *</label>
+              <input type="text" id="comment-name" required placeholder="e.g., Priya Sharma" class="w-full bg-evergreen-950 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-champagne-400" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-200 mb-1">City &amp; Country *</label>
+              <input type="text" id="comment-location" required placeholder="e.g., Mumbai, India" class="w-full bg-evergreen-950 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-champagne-400" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-200 mb-1">Program / Role *</label>
+              <select id="comment-role" class="w-full bg-evergreen-950 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-champagne-400">
+                <option value="Grant Check Recipient">Grant Check Recipient</option>
+                <option value="Student & Scholar">Student &amp; Scholar</option>
+                <option value="Artist & Creator">Artist &amp; Creator</option>
+                <option value="Small Business Owner">Small Business Owner</option>
+                <option value="Community Organizer">Community Organizer</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-200 mb-1">Your Testimony or Comment *</label>
+            <textarea id="comment-text" rows="3" required placeholder="Share how receiving year-end support, shared studio access, or 211 relief impacted your life or project..." class="w-full bg-evergreen-950 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-champagne-400"></textarea>
+          </div>
+
+          <div class="flex items-center justify-between gap-3">
+            <span class="text-xs text-blue-700 font-medium"><i class="fa-solid fa-sparkles mr-1"></i>Appears immediately in the wall above</span>
+            <button type="submit" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 !text-white font-bold text-sm shadow-lg transition flex items-center gap-2">
+              <i class="fa-solid fa-heart !text-white"></i> Post Comment
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENT IN CHARGE WHATSAPP BUSINESS SECTION -->
+  <section id="agent-whatsapp" class="py-12 px-4 sm:px-6 lg:px-8 relative" style="background-image: linear-gradient(135deg, rgba(239, 246, 255, 0.88), rgba(248, 250, 252, 0.92)), url('https://images.unsplash.com/photo-1511268559489-34b624fbfcf5?auto=format&fit=crop&w=1800&q=80'); background-size: cover; background-position: center;">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl border-2 border-blue-300/40 p-6 sm:p-10 shadow-2xl text-center relative overflow-hidden" style="background-image: linear-gradient(135deg, rgba(30, 58, 138, 0.91), rgba(3, 105, 161, 0.90)), url('https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center;">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/15 border border-white/25 !text-white text-xs font-bold uppercase tracking-wider mb-6">
+          <i class="fa-brands fa-whatsapp text-emerald-300 text-sm"></i> Agent in Charge • Official WhatsApp Desk
+        </div>
+
+        <!-- WhatsApp Business Card Matching Reference Image Exactly -->
+        <div class="max-w-sm mx-auto bg-slate-900/95 border border-blue-300/30 rounded-3xl p-6 pt-12 relative mt-8 shadow-2xl">
+          <!-- Festive Christmas Wreath & Ornaments Badge -->
+          <div class="w-20 h-20 rounded-full bg-white p-1 mx-auto -mt-20 mb-4 shadow-xl border-2 border-red-500 overflow-hidden flex items-center justify-center">
+            <img
+              src="https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&w=300&q=80"
+              onerror="this.src='https://placehold.co/200x200/b91c1c/ffffff?text=Merry+Christmas'"
+              alt="Festive Christmas Wreath & Holiday Ornaments"
+              class="w-full h-full rounded-full object-cover"
+            />
+          </div>
+
+          <h3 class="font-sans text-lg sm:text-xl font-bold !text-white tracking-tight">
+            Attorney Jeffrey A Rosen at Law
+          </h3>
+          <p class="text-xs !text-blue-200 font-medium mt-1 mb-5">
+            Agent in Charge • WhatsApp business account
+          </p>
+
+          <!-- Self-Contained Scannable QR Code SVG -->
+          <div class="bg-white rounded-2xl p-4 inline-block shadow-inner relative">
+            <svg viewBox="0 0 210 210" class="w-44 h-44 sm:w-48 sm:h-48 mx-auto rounded-lg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WhatsApp Business QR Code for Attorney Jeffrey A Rosen at Law">
+              <rect width="210" height="210" fill="#ffffff"/>
+              <!-- Top-Left Finder Pattern -->
+              <rect x="14" y="14" width="54" height="54" rx="6" fill="none" stroke="#0f172a" stroke-width="8"/>
+              <rect x="28" y="28" width="26" height="26" rx="3" fill="#0f172a"/>
+              <!-- Top-Right Finder Pattern -->
+              <rect x="142" y="14" width="54" height="54" rx="6" fill="none" stroke="#0f172a" stroke-width="8"/>
+              <rect x="156" y="28" width="26" height="26" rx="3" fill="#0f172a"/>
+              <!-- Bottom-Left Finder Pattern -->
+              <rect x="14" y="142" width="54" height="54" rx="6" fill="none" stroke="#0f172a" stroke-width="8"/>
+              <rect x="28" y="156" width="26" height="26" rx="3" fill="#0f172a"/>
+              <!-- QR Data Modules -->
+              <g fill="#0f172a">
+                <rect x="82" y="14" width="10" height="10"/><rect x="104" y="14" width="10" height="10"/><rect x="122" y="24" width="10" height="10"/>
+                <rect x="82" y="34" width="20" height="10"/><rect x="114" y="44" width="18" height="10"/><rect x="82" y="56" width="10" height="12"/>
+                <rect x="14" y="82" width="18" height="10"/><rect x="44" y="82" width="14" height="10"/><rect x="14" y="102" width="10" height="18"/>
+                <rect x="36" y="106" width="22" height="10"/><rect x="14" y="124" width="26" height="8"/><rect x="52" y="122" width="14" height="10"/>
+                <rect x="142" y="82" width="14" height="10"/><rect x="168" y="82" width="28" height="10"/><rect x="146" y="102" width="22" height="10"/>
+                <rect x="180" y="102" width="16" height="18"/><rect x="142" y="122" width="16" height="10"/><rect x="168" y="124" width="28" height="8"/>
+                <rect x="82" y="142" width="12" height="18"/><rect x="104" y="142" width="24" height="10"/><rect x="138" y="142" width="18" height="12"/>
+                <rect x="168" y="144" width="12" height="22"/><rect x="186" y="142" width="10" height="14"/><rect x="82" y="170" width="22" height="10"/>
+                <rect x="114" y="162" width="14" height="24"/><rect x="138" y="168" width="20" height="12"/><rect x="180" y="174" width="16" height="22"/>
+                <rect x="82" y="186" width="16" height="10"/><rect x="136" y="186" width="32" height="10"/>
+              </g>
+              <!-- Center WhatsApp Badge -->
+              <circle cx="105" cy="105" r="22" fill="#16a34a"/>
+              <path d="M97 97c2-2 5-2 7 0l3 3c1 1 1 3 0 4l-2 2c2 3 5 6 8 8l2-2c1-1 3-1 4 0l3 3c2 2 2 5 0 7-3 3-8 4-13 1-6-3-12-9-15-15-3-5-2-10 1-13z" fill="#ffffff"/>
+            </svg>
+            <div class="mt-2 flex items-center justify-center gap-1.5 text-[11px] font-bold text-slate-800">
+              <i class="fa-brands fa-whatsapp text-emerald-600 text-sm"></i>
+              <span>Scan to Connect on WhatsApp</span>
+            </div>
+          </div>
+
+          <div class="mt-5">
+            <a
+              href="https://wa.me/12025550194?text=Hello%20Attorney%20Jeffrey%20A%20Rosen%2C%20I%20would%20like%20assistance%20with%20YearEnd%20FBWatch."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 !text-slate-950 font-extrabold text-xs sm:text-sm shadow-lg transition"
+            >
+              <i class="fa-brands fa-whatsapp text-base"></i>
+              <span>Message Agent in Charge on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALIFIED ON FILE (FB WAITING TO CLAIM) & VERIFIED GRANT WINNERS SECTION -->
+  <section id="qualified-winners-board" class="py-12 px-4 sm:px-6 lg:px-8 relative" style="background-image: linear-gradient(135deg, rgba(248, 250, 252, 0.90), rgba(219, 234, 254, 0.90)), url('https://images.unsplash.com/photo-1575361204480-aadea25e6e68?auto=format&fit=crop&w=1800&q=80'); background-size: cover; background-position: center;">
+    <div class="max-w-7xl mx-auto space-y-10">
+
+      <!-- Part 1: People Still on File & Qualified for the Grant (FB Waiting for Them to Claim) -->
+      <div class="rounded-3xl border-2 border-blue-200 p-6 sm:p-8 shadow-xl" style="background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(239, 246, 255, 0.92)), url('https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center;">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-5 mb-6 border-b border-blue-100">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-700 !text-white text-xs font-extrabold uppercase tracking-wider mb-2 shadow-sm">
+              <i class="fa-brands fa-facebook !text-white"></i> FB Waiting For Them To Claim
+            </div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900">
+              🎄 Qualified Applicants Still on File — Ready to Claim
+            </h2>
+            <p class="text-slate-600 text-xs sm:text-sm mt-1">
+              The individuals listed below have passed initial file verification and are qualified for year-end release. <strong class="text-blue-700">FB is actively waiting for them to claim</strong> their allocation.
+            </p>
+          </div>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold shrink-0">
+            <span class="w-2.5 h-2.5 rounded-full bg-blue-600 animate-ping"></span>
+            Live Claim Queue Active
+          </span>
+        </div>
+
+        <!-- Qualified Claimants Grid -->
+        <div id="qualified-claimants-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+
+      <!-- Part 2: People That Have Gotten Funds / Verified Award Winners -->
+      <div class="rounded-3xl border-2 border-emerald-300 p-6 sm:p-8 shadow-xl" style="background-image: linear-gradient(135deg, rgba(239, 246, 255, 0.93), rgba(255, 255, 255, 0.94)), url('https://images.unsplash.com/photo-1576919228236-a097c32a5cd4?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center;">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-5 mb-6 border-b border-emerald-200">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-600 !text-white text-xs font-extrabold uppercase tracking-wider mb-2 shadow-sm">
+              <i class="fa-solid fa-circle-check !text-white"></i> Funds Disbursed &amp; Claimed
+            </div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900">
+              🏆 Verified Grant Recipients &amp; Holiday Winners
+            </h2>
+            <p class="text-slate-600 text-xs sm:text-sm mt-1">
+              Celebrating confirmed recipients who have completed verification and received their year-end grant packages.
+            </p>
+          </div>
+          <div class="px-4 py-2 rounded-2xl bg-emerald-100 border border-emerald-300 text-emerald-900 text-xs font-extrabold">
+            <i class="fa-solid fa-award mr-1.5 text-emerald-700"></i>100% Confirmed Releases
+          </div>
+        </div>
+
+        <!-- Featured Winner Banner: Jacinto Alba -->
+        <div class="mb-6 rounded-2xl bg-gradient-to-r from-blue-800 via-blue-700 to-emerald-700 p-5 sm:p-6 shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border border-blue-300/40">
+          <div class="flex items-center gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-white text-blue-800 flex items-center justify-center text-2xl font-extrabold shadow-md shrink-0">
+              <i class="fa-solid fa-trophy text-amber-500"></i>
+            </div>
+            <div>
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-300 text-slate-950 text-[11px] font-extrabold uppercase tracking-wider mb-1">
+                <i class="fa-solid fa-star"></i> Spotlight Grant Winner
+              </div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold !text-white">
+                Winner : Jacinto Alba
+              </h3>
+              <p class="text-xs sm:text-sm !text-blue-100 mt-0.5">
+                Full Year-End Grant Package Released &amp; Confirmed • YearEnd FBWatch Verified Recipient
+              </p>
+            </div>
+          </div>
+          <span class="px-4 py-2 rounded-xl bg-white !text-emerald-800 font-extrabold text-xs uppercase tracking-wider shadow shrink-0">
+            <i class="fa-solid fa-check-double mr-1 text-emerald-600"></i> Confirmed 10 days ago
+          </span>
+        </div>
+
+        <!-- Additional Confirmed Recipients Grid -->
+        <div id="received-winners-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t-2 border-blue-200 py-12 px-4 sm:px-6 lg:px-8 text-sm text-slate-600 relative overflow-hidden" style="background-image: linear-gradient(to bottom, rgba(239, 246, 255, 0.91), rgba(255, 255, 255, 0.95)), url('https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&w=1800&q=80'); background-size: cover; background-position: center;">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-2.5 mb-3">
+          <i class="fa-solid fa-sleigh text-red-600 text-xl"></i>
+          <span class="font-serif font-bold text-xl text-slate-900">YearEnd <span class="text-blue-700">FBWatch</span></span>
+        </div>
+        <p class="text-slate-600 text-xs sm:text-sm max-w-md leading-relaxed">
+          Empowering individuals, students, artists, small businesses, and community builders around the entire world with transparent year-end support, shared resources, ceremonial grant awards, and 211 emergency relief connections.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-slate-900 font-bold mb-3 text-xs uppercase tracking-wider">Quick Links</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#paparazzi-spotlight" class="hover:text-blue-700 transition">Christmas Paparazzi Drives</a></li>
+          <li><a href="#award-gallery" class="hover:text-blue-700 transition">Check Handover Photos</a></li>
+          <li><a href="#grant-directory" class="hover:text-blue-700 transition">Worldwide Rolling Grants</a></li>
+          <li><a href="#testimonials-section" class="hover:text-blue-700 transition">Happy Recipient Testimonies</a></li>
+          <li><a href="#agent-whatsapp" class="hover:text-blue-700 transition">Agent in Charge WhatsApp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-slate-900 font-bold mb-3 text-xs uppercase tracking-wider">Global Year-End Support</h4>
+        <p class="text-xs leading-relaxed">
+          Connect directly with our <strong class="text-slate-900">Agent in Charge WhatsApp Desk</strong> or submit your application through the <strong class="text-slate-900">Apply Now</strong> button above for rolling review.
+        </p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto pt-6 border-t border-blue-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+      <p>&copy; 2026 YearEnd FBWatch Holiday &amp; Global Relief Hub. Open to every community worldwide.</p>
+      <div class="flex items-center gap-4">
+        <span class="classic-world-crest inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-900 border border-amber-400 !text-white font-bold shadow">
+          <i class="fa-solid fa-earth-americas text-amber-300"></i>
+          <span>100% Worldwide Rolling Opportunities</span>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- APPLICATION & ELIGIBILITY MODAL -->
+  <div id="apply-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm overflow-y-auto">
+    <div class="bg-evergreen-900 border border-champagne-400/40 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative my-8">
+      <button onclick="closeApplyModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-slate-200 flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Form View -->
+      <div id="apply-form-container">
+        <div class="flex flex-wrap items-center gap-2 mb-2">
+          <span id="modal-geo-badge" class="px-2.5 py-0.5 rounded-full bg-champagne-400/20 text-champagne-300 text-xs font-bold">🌍 Worldwide Open</span>
+          <span id="modal-amount-badge" class="px-2.5 py-0.5 rounded-full bg-emerald-400/20 text-emerald-300 text-xs font-bold">Full Grant Package</span>
+        </div>
+        <h3 id="modal-grant-title" class="font-serif text-2xl font-bold text-white mb-1">Worldwide Year-End Grant &amp; Relief Application</h3>
+        <p id="modal-grant-funder" class="text-xs text-slate-300 mb-4">Select your preferred worldwide grant, relief, or resource-sharing program below</p>
+
+        <!-- Program Selector Dropdown (Single Universal Application Entry) -->
+        <div class="mb-4">
+          <label for="app-program-select" class="block text-xs font-semibold text-champagne-300 mb-1.5">Select Worldwide Program *</label>
+          <select id="app-program-select" onchange="handleModalProgramChange(this.value)" class="w-full bg-evergreen-950 border border-champagne-400/40 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-champagne-400">
+            <!-- Populated dynamically with all worldwide programs -->
+          </select>
+        </div>
+
+        <!-- Quick Eligibility Check Banner -->
+        <div class="bg-evergreen-950/90 border border-emerald-400/30 rounded-2xl p-4 mb-5">
+          <div class="text-xs font-bold text-emerald-300 uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-circle-check mr-1"></i> Instant Worldwide Eligibility Pre-Check
+          </div>
+          <p id="modal-eligibility-note" class="text-xs text-slate-300 leading-relaxed">
+            Open to rolling applicants from every country. Zero application fee required.
+          </p>
+        </div>
+
+        <form id="grant-application-form" onsubmit="submitGrantApplication(event)" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-200 mb-1">Full Name or Organization *</label>
+              <input type="text" id="app-name" required placeholder="Alex Rivera / Studio Horizon" class="w-full bg-evergreen-950 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-champagne-400" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-200 mb-1">Email Address *</label>
+              <input type="email" id="app-email" required placeholder="alex@example.org" class="w-full bg-evergreen-950 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-champagne-400" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-200 mb-1">Applicant Category *</label>
+              <select id="app-category" required class="w-full bg-evergreen-950 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-champagne-400">
+                <option value="Individual / Family">Individual / Family</option>
+                <option value="Student">Student</option>
+                <option value="Artist / Creator">Artist / Creator</option>
+                <option value="Small Business">Small Business</option>
+                <option value="Community Project / Collective">Community Project / Collective</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-200 mb-1">Your City &amp; Country *</label>
+              <input type="text" id="app-region" required placeholder="e.g., Toronto, Canada / Sydney, Australia / Berlin, Europe" class="w-full bg-evergreen-950 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-champagne-400" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-200 mb-1">How will this year-end grant package or resource help your goal or hardship? *</label>
+            <textarea id="app-statement" rows="3" required placeholder="Briefly share your winter project, studio need, academic goal, or household relief request..." class="w-full bg-evergreen-950 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-champagne-400"></textarea>
+          </div>
+
+          <div class="flex items-center justify-end gap-3 pt-2">
+            <button type="button" onclick="closeApplyModal()" class="px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 text-sm font-semibold transition">
+              Cancel
+            </button>
+            <button type="submit" class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-champagne-400 to-champagne-500 hover:from-champagne-300 hover:to-champagne-400 text-evergreen-950 font-bold text-sm shadow-lg transition flex items-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i> Submit Worldwide Application
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Confirmation View -->
+      <div id="apply-confirmation-container" class="hidden text-center py-6 space-y-4">
+        <div class="w-16 h-16 rounded-full bg-emerald-400/20 text-emerald-300 flex items-center justify-center mx-auto text-3xl border border-emerald-400/40">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h3 class="font-serif text-2xl font-bold text-white">Application Draft Submitted!</h3>
+        <p class="text-slate-300 text-sm max-w-md mx-auto">
+          Your worldwide year-end request for <strong id="confirm-grant-name" class="text-champagne-300"></strong> has been logged for rolling review.
+        </p>
+        <div class="inline-block bg-evergreen-950 border border-champagne-400/40 rounded-xl px-5 py-3">
+          <div class="text-[11px] uppercase tracking-wider text-slate-400">Tracking Confirmation ID</div>
+          <div id="confirm-tracking-id" class="text-lg font-mono font-bold text-champagne-300 mt-0.5">YEGW-2026-8841</div>
+        </div>
+        <div class="pt-3 flex justify-center gap-3">
+          <button onclick="copyTrackingId()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-white text-xs font-semibold transition">
+            <i class="fa-regular fa-copy mr-1"></i> Copy ID
+          </button>
+          <button onclick="closeApplyModal()" class="px-5 py-2 rounded-xl bg-champagne-400 text-evergreen-950 text-xs font-bold hover:bg-champagne-300 transition">
+            Done
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHARE / LIST A RESOURCE MODAL -->
+  <div id="share-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm overflow-y-auto">
+    <div class="bg-evergreen-900 border border-champagne-400/40 rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative my-8">
+      <button onclick="closeShareModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-slate-200 flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-champagne-400/20 text-champagne-300 text-xs font-bold mb-2">
+        <i class="fa-solid fa-hand-holding-seedling"></i> Worldwide Community Resource Sharing
+      </div>
+      <h3 class="font-serif text-2xl font-bold text-white mb-1">Share a Grant Package or Resource</h3>
+      <p class="text-xs text-slate-300 mb-5">Add a rolling year-end grant, studio space share, equipment library, or mutual aid program open to applicants worldwide.</p>
+
+      <form id="share-resource-form" onsubmit="handleNewResourceSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-200 mb-1">Opportunity / Resource Title *</label>
+          <input type="text" id="new-title" required placeholder="e.g., Global Mutual Aid & Creator Laptop Share" class="w-full bg-evergreen-950 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-champagne-400" />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-200 mb-1">Host Organization *</label>
+            <input type="text" id="new-funder" required placeholder="e.g., Horizon Lights Collective" class="w-full bg-evergreen-950 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-champagne-400" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-200 mb-1">Support Package Provided *</label>
+            <input type="text" id="new-amount" required placeholder="e.g., Full Project Grant + Studio Pass" class="w-full bg-evergreen-950 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-champagne-400" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-200 mb-1">Program Scope *</label>
+            <select id="new-geo" class="w-full bg-evergreen-950 border border-white/15 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-champagne-400">
+              <option value="Global Rolling">Global Rolling</option>
+              <option value="International Relief">International Relief</option>
+              <option value="Universal Access">Universal Access</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-200 mb-1">Applicant Type *</label>
+            <select id="new-applicant" class="w-full bg-evergreen-950 border border-white/15 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-champagne-400">
+              <option value="Individuals">Individuals</option>
+              <option value="Students">Students</option>
+              <option value="Artists">Artists</option>
+              <option value="Small Businesses">Small Businesses</option>
+              <option value="Community Projects">Community Projects</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-200 mb-1">Support Type *</label>
+            <select id="new-support" class="w-full bg-evergreen-950 border border-white/15 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-champagne-400">
+              <option value="Rolling Opportunities">Rolling Opportunities</option>
+              <option value="Hardship & Emergency Relief">Hardship &amp; Emergency Relief</option>
+              <option value="Project Grants">Project Grants</option>
+              <option value="Resource Sharing & Access">Resource Sharing &amp; Access</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-200 mb-1">Summary &amp; Worldwide Eligibility *</label>
+          <textarea id="new-summary" rows="3" required placeholder="Describe what resources or grant backing are provided..." class="w-full bg-evergreen-950 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-champagne-400"></textarea>
+        </div>
+
+        <div class="flex justify-end gap-3 pt-2">
+          <button type="button" onclick="closeShareModal()" class="px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 text-sm font-semibold">Cancel</button>
+          <button type="submit" class="px-5 py-2.5 rounded-xl bg-champagne-400 hover:bg-champagne-300 text-evergreen-950 font-bold text-sm shadow-lg transition">
+            Publish Worldwide
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SAVED BOOKMARKS DRAWER MODAL -->
+  <div id="saved-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="bg-evergreen-900 border border-champagne-400/40 rounded-3xl max-w-xl w-full p-6 shadow-2xl relative">
+      <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
+        <h3 class="font-serif text-xl font-bold text-white flex items-center gap-2">
+          <i class="fa-solid fa-bookmark text-crimson-500"></i> Your Saved Year-End Opportunities
+        </h3>
+        <button onclick="closeSavedModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-slate-200 flex items-center justify-center">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div id="saved-list-container" class="space-y-3 max-h-80 overflow-y-auto pr-1">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // =========================================================================
+    // 1. WORLDWIDE GRANT, RELIEF & RESOURCE SHARING DATASET (NO DOLLAR AMOUNTS)
+    // =========================================================================
+    let grantsData = [
+      {
+        id: "g-1",
+        title: "Holiday Hearth & Winter Hardship Relief Grant",
+        funder: "Global Community Relief Alliance",
+        amount: "Full Household Relief Package",
+        geo: ["Global Rolling", "International Relief", "Universal Access"],
+        geoLabel: "Worldwide • All Countries",
+        deadline: "Rolling Through Dec 31",
+        applicantTypes: ["Individuals", "Students", "Artists", "Small Businesses", "Community Projects"],
+        supportTypes: ["Hardship & Emergency Relief", "Rolling Opportunities", "Project Grants", "Resource Sharing & Access"],
+        featuredPaparazzi: true,
+        trendingTag: "🔥 Official Holiday Grant • 48hr Turnaround",
+        summary: "Rapid-response year-end relief for individuals and families worldwide facing winter heating bills, emergency groceries, housing gaps, or medical travel.",
+        eligibility: "Open to individuals and households in every country experiencing seasonal or urgent financial hardship."
+      }
+    ];
+
+    // =========================================================================
+    // 2. HAPPY TESTIMONIALS & COMMUNITY COMMENTS DATASET
+    //    (Real Photographic Portraits: Older Female, Older Male, Young White-Haired)
+    // =========================================================================
+    let testimonialsData = [
+      {
+        name: "Margaret Holloway",
+        location: "Dublin, Ireland",
+        role: "Older Female Check Recipient",
+        avatar: "https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&w=200&q=80",
+        quote: "At 68 years old, receiving my ceremonial year-end award check brought tears of joy! Our neighborhood senior craft guild upgraded our sewing machines and winter heating right away.",
+        time: "2 hours ago"
+      },
+      {
+        name: "Arthur Pendelton",
+        location: "Toronto, Canada",
+        role: "Older Male Community Recipient",
+        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80",
+        quote: "As a retired carpenter mentoring youth, this rolling grant check funded our entire winter woodworking tool library. Simple application and wonderful support from start to finish!",
+        time: "4 hours ago"
+      },
+      {
+        name: "Liam Frost",
+        location: "Reykjavik, Iceland",
+        role: "Young White-Haired Creator & Student",
+        avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80",
+        quote: "With my platinum white hair and winter studio gear, the Christmas Paparazzi spotlight felt surreal! YearEnd FBWatch covered my final semester lab fees and audio workstation.",
+        time: "6 hours ago"
+      },
+      {
+        name: "Evelyn Brooks",
+        location: "Manchester, United Kingdom",
+        role: "Older Female Small Business Owner",
+        avatar: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=200&q=80",
+        quote: "Our family bookshop stayed open and thriving this winter thanks to the Year-End Boost package. Seeing real recipients celebrated gave me the confidence to apply!",
+        time: "1 day ago"
+      },
+      {
+        name: "Walter Kowalski",
+        location: "Warsaw, Poland",
+        role: "Older Male Heritage Artisan",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
+        quote: "The Living World Traditions grant allowed me to pass down traditional woodcarving to twenty apprentices this holiday season. Truly grateful for this worldwide initiative.",
+        time: "2 days ago"
+      },
+      {
+        name: "Soren Lindqvist",
+        location: "Stockholm, Sweden",
+        role: "Young White-Haired Social Innovator",
+        avatar: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=200&q=80",
+        quote: "The Youth Social Venture Seed Award gave our student clean-energy project the exact backing and mentorship we needed before the new year!",
+        time: "3 days ago"
+      }
+    ];
+
+    // =========================================================================
+    // 2B. QUALIFIED ON FILE (FB WAITING TO CLAIM) & RECEIVED WINNERS LISTS
+    // =========================================================================
+    const qualifiedOnFileList = [
+      { name: "Lynette Custodio", status: "FB Waiting to Claim", fileCode: "FB-2026-4102", note: "Qualified • Year-End Household & Relief File" },
+      { name: "Carmen Mok", status: "FB Waiting to Claim", fileCode: "FB-2026-4118", note: "Qualified • Community & Small Business Grant" },
+      { name: "Larry Ramsey", status: "FB Waiting to Claim", fileCode: "FB-2026-4135", note: "Qualified • Winter Hardship & Security Package" },
+      { name: "Bella Marinas Visperas", status: "FB Waiting to Claim", fileCode: "FB-2026-4149", note: "Qualified • Holiday Family & Resource Allocation" },
+      { name: "Pinky Promise", status: "FB Waiting to Claim", fileCode: "FB-2026-4163", note: "Qualified • Creative & Community Project Pool" },
+      { name: "Lindą Etzkon", status: "FB Waiting to Claim", fileCode: "FB-2026-4177", note: "Qualified • Rolling Global Relief File" },
+      { name: "Coralie Divinagracia Labog", status: "FB Waiting to Claim", fileCode: "FB-2026-4190", note: "Qualified • Year-End Assistance & Aid File" },
+      { name: "Catz Lykof", status: "FB Waiting to Claim", fileCode: "FB-2026-4204", note: "Qualified • Independent Creator & Relief File" },
+      { name: "Marisol Vega-Santos", status: "FB Waiting to Claim", fileCode: "FB-2026-4219", note: "Qualified • Holiday Small Enterprise Boost" },
+      { name: "Liam O'Connor", status: "FB Waiting to Claim", fileCode: "FB-2026-4231", note: "Qualified • Global Rolling Education & Tech Grant" },
+      { name: "Claire Beaumont", status: "FB Waiting to Claim", fileCode: "FB-2026-4248", note: "Qualified • Neighborhood Mutual Aid Allocation" },
+      { name: "Teresa-Ann McAllister", status: "FB Waiting to Claim", fileCode: "FB-2026-4262", note: "Qualified • Winter Housing & Utility Relief" }
+    ];
+
+    const receivedFundsWinners = [
+      { name: "Jacinto Alba", badge: "Winner : Jacinto Alba", package: "Full Year-End Grant Package Released", date: "Confirmed 10 days ago" },
+      { name: "Rowena Macapagal", badge: "Confirmed Recipient", package: "Holiday Family & Relief Disbursement", date: "Confirmed Yesterday" },
+      { name: "Harrison Vance", badge: "Confirmed Recipient", package: "Small Business Inventory & Tool Grant", date: "Confirmed 2 days ago" },
+      { name: "Clarissa Mendoza", badge: "Confirmed Recipient", package: "Winter Hardship & Community Pantry Aid", date: "Confirmed 3 days ago" },
+      { name: "Henrik Lindholm", badge: "Confirmed Recipient", package: "Global Creator & Studio Catalyst Package", date: "Confirmed 4 days ago" },
+      { name: "Sophie Vermeulen", badge: "Confirmed Recipient", package: "Student Tuition & Laptop Relief Package", date: "Confirmed 5 days ago" }
+    ];
+
+    function renderQualifiedAndWinners() {
+      const qualifiedGrid = document.getElementById("qualified-claimants-grid");
+      const winnersGrid = document.getElementById("received-winners-grid");
+
+      if (qualifiedGrid) {
+        qualifiedGrid.innerHTML = qualifiedOnFileList.map(person => `
+          <div class="flex items-center justify-between gap-3 p-4 rounded-2xl bg-blue-50/75 hover:bg-blue-100/70 border border-blue-200 transition">
+            <div class="flex items-center gap-3 min-w-0">
+              <!-- Left Margin Status Pill: FB Waiting for Them to Claim -->
+              <span class="shrink-0 inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-blue-700 !text-white text-[10px] font-extrabold uppercase tracking-wide shadow-sm">
+                <i class="fa-brands fa-facebook !text-white"></i>
+                <span>FB Waiting to Claim</span>
+              </span>
+              <div class="min-w-0">
+                <div class="font-bold text-slate-900 text-sm truncate">${person.name}</div>
+                <div class="text-[11px] text-slate-600 truncate">${person.note}</div>
+              </div>
+            </div>
+            <span class="text-[10px] font-mono font-bold text-blue-800 bg-white px-2 py-1 rounded-lg border border-blue-200 shrink-0">
+              ${person.fileCode}
+            </span>
+          </div>
+        `).join("");
+      }
+
+      if (winnersGrid) {
+        winnersGrid.innerHTML = receivedFundsWinners.map(winner => `
+          <div class="flex items-center justify-between gap-3 p-4 rounded-2xl bg-white hover:bg-emerald-50/60 border border-emerald-200 shadow-sm transition">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 font-bold">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <div class="min-w-0">
+                <div class="text-[10px] font-extrabold uppercase tracking-wider text-emerald-700">${winner.badge}</div>
+                <div class="font-bold text-slate-900 text-sm truncate">${winner.name}</div>
+                <div class="text-[11px] text-slate-600 truncate">${winner.package}</div>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-600 !text-white text-[10px] font-bold shrink-0">
+              ${winner.date}
+            </span>
+          </div>
+        `).join("");
+      }
+    }
+
+    // =========================================================================
+    // 3. STATE MANAGEMENT
+    // =========================================================================
+    let activeGeo = "ALL";
+    let activeApplicant = "ALL";
+    let activeSupport = "ALL";
+    let searchQuery = "";
+    let savedGrantIds = new Set();
+    let currentModalGrant = null;
+
+    // =========================================================================
+    // 4. RENDER FUNCTIONS (Paparazzi, Directory, Testimonials)
+    // =========================================================================
+    function renderPaparazziSpotlight() {
+      const container = document.getElementById("paparazzi-grid");
+      const featured = grantsData.filter(g => g.featuredPaparazzi);
+
+      container.innerHTML = featured.map(grant => `
+        <div onclick="createCameraFlash(event, this)" class="paparazzi-card rounded-2xl bg-white border-2 border-blue-300 p-6 sm:p-7 flex flex-col lg:flex-row lg:items-center justify-between gap-6 cursor-pointer group shadow-lg">
+          <div class="flex-1">
+            <div class="flex flex-wrap items-center gap-2.5 mb-3">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600 !text-white text-xs font-extrabold uppercase tracking-wider shadow-sm">
+                ${grant.trendingTag}
+              </span>
+              <span class="classic-world-crest inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-900 border border-amber-400 !text-white text-xs font-bold shadow-sm">
+                <i class="fa-solid fa-earth-americas text-amber-300"></i>
+                <span>${grant.geoLabel}</span>
+              </span>
+            </div>
+
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-blue-700 transition leading-snug mb-2">
+              ${grant.title}
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-3xl mb-3">
+              ${grant.summary}
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              ${grant.applicantTypes.map(tag => `
+                <span class="px-2.5 py-0.5 rounded-md bg-blue-50 border border-blue-200 text-blue-800 text-[11px] font-semibold">
+                  ${tag}
+                </span>
+              `).join("")}
+            </div>
+          </div>
+
+          <div class="lg:border-l lg:border-blue-100 lg:pl-6 flex flex-row lg:flex-col items-center lg:items-end justify-between gap-3 shrink-0">
+            <div class="lg:text-right">
+              <div class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Support Package</div>
+              <div class="text-sm sm:text-base font-extrabold text-blue-800">${grant.amount}</div>
+              <div class="text-xs text-emerald-700 font-semibold mt-0.5">
+                <i class="fa-solid fa-circle-check mr-1"></i>${grant.deadline}
+              </div>
+            </div>
+            <span class="w-10 h-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center group-hover:bg-blue-700 group-hover:!text-white transition shadow-sm" title="Click for Camera Flash">
+              <i class="fa-solid fa-camera text-sm"></i>
+            </span>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function renderTestimonials() {
+      const grid = document.getElementById("testimonials-grid");
+      grid.innerHTML = testimonialsData.map(item => `
+        <div class="paparazzi-card rounded-2xl bg-evergreen-900/75 border border-white/10 p-5 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <div class="flex items-center gap-3">
+                <img
+                  src="${item.avatar}"
+                  onerror="this.src='https://placehold.co/100x100/0e352b/f1d47e?text=${encodeURIComponent(item.name.charAt(0))}'"
+                  alt="${item.name}"
+                  class="w-12 h-12 rounded-full object-cover border-2 border-champagne-400"
+                />
+                <div>
+                  <h4 class="font-bold text-white text-sm">${item.name}</h4>
+                  <div class="text-xs text-champagne-300"><i class="fa-solid fa-location-dot mr-1"></i>${item.location}</div>
+                </div>
+              </div>
+              <span class="text-champagne-400 text-xs flex items-center gap-0.5" title="5-Star Verified Experience">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-200 italic leading-relaxed mb-4">
+              “${item.quote}”
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-white/10 flex items-center justify-between text-[11px]">
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-400/15 text-emerald-300 font-semibold">${item.role}</span>
+            <span class="text-slate-400">${item.time}</span>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function addCommunityComment(event) {
+      event.preventDefault();
+      const name = document.getElementById("comment-name").value.trim();
+      const location = document.getElementById("comment-location").value.trim();
+      const role = document.getElementById("comment-role").value;
+      const quote = document.getElementById("comment-text").value.trim();
+
+      testimonialsData.unshift({
+        name,
+        location,
+        role,
+        avatar: `https://placehold.co/100x100/14493b/f1d47e?text=${encodeURIComponent(name.charAt(0).toUpperCase())}`,
+        quote,
+        time: "Just now"
+      });
+
+      document.getElementById("testimonial-form").reset();
+      renderTestimonials();
+      showToast("🎉 Thank you! Your happy testimony is now live on the wall!", "gold");
+    }
+
+    function renderGrantsDirectory() {
+      const grid = document.getElementById("grants-grid");
+      const emptyState = document.getElementById("empty-state");
+      const resultsCount = document.getElementById("results-count");
+
+      const filtered = grantsData.filter(grant => {
+        const matchesGeo = activeGeo === "ALL" || grant.geo.includes(activeGeo);
+        const matchesApp = activeApplicant === "ALL" || grant.applicantTypes.includes(activeApplicant);
+        const matchesSup = activeSupport === "ALL" || grant.supportTypes.includes(activeSupport);
+
+        const q = searchQuery.trim().toLowerCase();
+        const matchesQuery = !q ||
+          grant.title.toLowerCase().includes(q) ||
+          grant.funder.toLowerCase().includes(q) ||
+          grant.summary.toLowerCase().includes(q) ||
+          grant.geoLabel.toLowerCase().includes(q) ||
+          grant.applicantTypes.some(a => a.toLowerCase().includes(q)) ||
+          grant.supportTypes.some(s => s.toLowerCase().includes(q));
+
+        return matchesGeo && matchesApp && matchesSup && matchesQuery;
+      });
+
+      resultsCount.textContent = filtered.length;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = "";
+        emptyState.classList.remove("hidden");
+        return;
+      }
+
+      emptyState.classList.add("hidden");
+
+      grid.innerHTML = filtered.map(grant => {
+        const isSaved = savedGrantIds.has(grant.id);
+        return `
+          <article class="paparazzi-card rounded-2xl bg-evergreen-900/70 backdrop-blur-md border border-white/10 p-5 sm:p-6 flex flex-col justify-between">
+            <div>
+              <!-- Top Badges Row -->
+              <div class="flex items-start justify-between gap-2 mb-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-blue-900 to-blue-700 border border-amber-400 !text-white text-xs font-bold shadow-sm">
+                  <i class="fa-solid fa-earth-americas text-amber-300"></i>
+                  <span>${grant.geoLabel}</span>
+                </span>
+                <button onclick="toggleBookmark('${grant.id}')" class="w-9 h-9 rounded-xl ${isSaved ? 'bg-crimson-600 text-white' : 'bg-white/5 hover:bg-white/15 text-slate-300'} flex items-center justify-center transition" title="${isSaved ? 'Remove Bookmark' : 'Save Opportunity'}">
+                  <i class="fa-${isSaved ? 'solid' : 'regular'} fa-bookmark text-sm"></i>
+                </button>
+              </div>
+
+              <!-- Title & Funder -->
+              <h3 class="font-serif text-xl font-bold text-white leading-snug mb-1">
+                ${grant.title}
+              </h3>
+              <p class="text-xs text-emerald-300/90 font-medium mb-3">
+                <i class="fa-solid fa-building-columns mr-1 opacity-75"></i>${grant.funder}
+              </p>
+
+              <!-- Summary -->
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                ${grant.summary}
+              </p>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                ${grant.applicantTypes.map(tag => `
+                  <span class="px-2 py-0.5 rounded-md bg-emerald-400/10 border border-emerald-400/25 text-emerald-300 text-[11px] font-medium">
+                    ${tag}
+                  </span>
+                `).join("")}
+                ${grant.supportTypes.map(tag => `
+                  <span class="px-2 py-0.5 rounded-md bg-champagne-400/10 border border-champagne-400/25 text-champagne-200 text-[11px] font-medium">
+                    ${tag}
+                  </span>
+                `).join("")}
+              </div>
+            </div>
+
+            <!-- Footer Info -->
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between gap-3">
+              <div>
+                <div class="text-sm sm:text-base font-extrabold text-champagne-300">${grant.amount}</div>
+                <div class="text-[11px] text-slate-400 flex items-center gap-1 mt-0.5">
+                  <i class="fa-regular fa-clock text-crimson-400"></i> ${grant.deadline}
+                </div>
+              </div>
+              <span class="px-3 py-1.5 rounded-xl bg-emerald-400/10 border border-emerald-400/25 text-emerald-300 font-semibold text-xs shrink-0">
+                <i class="fa-solid fa-globe mr-1"></i>Eligible Worldwide
+              </span>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    // =========================================================================
+    // 4. CHRISTMAS PAPARAZZI FLASH EFFECTS
+    // =========================================================================
+    function createCameraFlash(event, element) {
+      const rect = element.getBoundingClientRect();
+      const burst = document.createElement("div");
+      burst.className = "flash-burst";
+      burst.style.left = `${event.clientX - rect.left - 70}px`;
+      burst.style.top = `${event.clientY - rect.top - 70}px`;
+      element.appendChild(burst);
+      setTimeout(() => burst.remove(), 600);
+    }
+
+    function triggerPaparazziShow() {
+      const cards = document.querySelectorAll("#paparazzi-grid .paparazzi-card");
+      cards.forEach((card, idx) => {
+        setTimeout(() => {
+          const burst = document.createElement("div");
+          burst.className = "flash-burst";
+          burst.style.left = "35%";
+          burst.style.top = "25%";
+          card.appendChild(burst);
+          setTimeout(() => burst.remove(), 600);
+        }, idx * 220);
+      });
+      showToast("📸 Christmas Paparazzi Spotlight refreshed! Featured year-end grants highlighted.", "gold");
+    }
+
+    // =========================================================================
+    // 5. FILTERING & SEARCH HANDLERS
+    // =========================================================================
+    function setupFilterListeners() {
+      // Geo Pills
+      document.querySelectorAll(".filter-pill-geo").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".filter-pill-geo").forEach(b => {
+            b.className = "filter-pill-geo px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition";
+          });
+          btn.className = "filter-pill-geo active px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-champagne-400 text-evergreen-950 shadow transition";
+          activeGeo = btn.dataset.geo;
+          renderGrantsDirectory();
+        });
+      });
+
+      // Applicant Pills
+      document.querySelectorAll(".filter-pill-app").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".filter-pill-app").forEach(b => {
+            b.className = "filter-pill-app px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition";
+          });
+          btn.className = "filter-pill-app active px-3 py-1.5 rounded-xl text-xs font-semibold bg-emerald-400 text-evergreen-950 transition";
+          activeApplicant = btn.dataset.applicant;
+          renderGrantsDirectory();
+        });
+      });
+
+      // Support Pills
+      document.querySelectorAll(".filter-pill-sup").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".filter-pill-sup").forEach(b => {
+            b.className = "filter-pill-sup px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition";
+          });
+          btn.className = "filter-pill-sup active px-3 py-1.5 rounded-xl text-xs font-semibold bg-crimson-500 text-white transition";
+          activeSupport = btn.dataset.support;
+          renderGrantsDirectory();
+        });
+      });
+
+      // Search Input
+      const searchInput = document.getElementById("hero-search-input");
+      const clearBtn = document.getElementById("clear-search-btn");
+
+      searchInput.addEventListener("input", (e) => {
+        searchQuery = e.target.value;
+        clearBtn.classList.toggle("hidden", !searchQuery);
+        renderGrantsDirectory();
+      });
+
+      clearBtn.addEventListener("click", () => {
+        searchQuery = "";
+        searchInput.value = "";
+        clearBtn.classList.add("hidden");
+        renderGrantsDirectory();
+      });
+    }
+
+    function resetAllFilters() {
+      activeGeo = "ALL";
+      activeApplicant = "ALL";
+      activeSupport = "ALL";
+      searchQuery = "";
+      document.getElementById("hero-search-input").value = "";
+      document.getElementById("clear-search-btn").classList.add("hidden");
+
+      document.querySelector('.filter-pill-geo[data-geo="ALL"]').click();
+      document.querySelector('.filter-pill-app[data-applicant="ALL"]').click();
+      document.querySelector('.filter-pill-sup[data-support="ALL"]').click();
+    }
+
+    function scrollToDirectory() {
+      document.getElementById("grant-directory").scrollIntoView({ behavior: "smooth" });
+    }
+
+    // =========================================================================
+    // 6. BOOKMARKS, APPLICATION MODAL & RESOURCE SHARING MODAL
+    // =========================================================================
+    function toggleBookmark(id) {
+      if (savedGrantIds.has(id)) {
+        savedGrantIds.delete(id);
+        showToast("Removed from saved opportunities.", "slate");
+      } else {
+        savedGrantIds.add(id);
+        showToast("🔖 Saved to your Year-End Grant Shortlist!", "gold");
+      }
+      document.getElementById("saved-count-badge").textContent = savedGrantIds.size;
+      renderGrantsDirectory();
+    }
+
+    document.getElementById("open-saved-btn").addEventListener("click", () => {
+      const modal = document.getElementById("saved-modal");
+      const container = document.getElementById("saved-list-container");
+      const savedItems = grantsData.filter(g => savedGrantIds.has(g.id));
+
+      if (savedItems.length === 0) {
+        container.innerHTML = `<p class="text-sm text-slate-400 text-center py-8">No opportunities saved yet. Click the bookmark icon on any grant card to build your shortlist!</p>`;
+      } else {
+        container.innerHTML = savedItems.map(item => `
+          <div class="p-3.5 rounded-xl bg-evergreen-950 border border-white/10 flex items-center justify-between gap-3">
+            <div>
+              <div class="text-xs text-champagne-300 font-semibold">${item.geoLabel} • ${item.amount}</div>
+              <div class="text-sm font-bold text-white">${item.title}</div>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+              <button onclick="toggleBookmark('${item.id}'); document.getElementById('open-saved-btn').click()" class="p-1.5 text-slate-400 hover:text-crimson-400" title="Remove"><i class="fa-solid fa-trash"></i></button>
+            </div>
+          </div>
+        `).join("");
+      }
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    });
+
+    function closeSavedModal() {
+      const modal = document.getElementById("saved-modal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    function openApplyModal(grantId) {
+      const selectEl = document.getElementById("app-program-select");
+      selectEl.innerHTML = grantsData.map(g => `<option value="${g.id}">${g.title} — (${g.amount})</option>`).join("");
+
+      const selectedGrant = grantsData.find(g => g.id === grantId) || grantsData[0];
+      currentModalGrant = selectedGrant;
+      selectEl.value = selectedGrant.id;
+
+      document.getElementById("apply-form-container").classList.remove("hidden");
+      document.getElementById("apply-confirmation-container").classList.add("hidden");
+      document.getElementById("grant-application-form").reset();
+      selectEl.value = selectedGrant.id;
+
+      updateModalGrantDetails(selectedGrant);
+
+      const modal = document.getElementById("apply-modal");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function handleModalProgramChange(grantId) {
+      const grant = grantsData.find(g => g.id === grantId);
+      if (grant) {
+        currentModalGrant = grant;
+        updateModalGrantDetails(grant);
+      }
+    }
+
+    function updateModalGrantDetails(grant) {
+      document.getElementById("modal-geo-badge").textContent = grant.geoLabel;
+      document.getElementById("modal-amount-badge").textContent = grant.amount;
+      document.getElementById("modal-grant-title").textContent = grant.title;
+      document.getElementById("modal-grant-funder").textContent = `Administered by ${grant.funder} • ${grant.deadline}`;
+      document.getElementById("modal-eligibility-note").textContent = grant.eligibility;
+    }
+
+    function closeApplyModal() {
+      const modal = document.getElementById("apply-modal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    function submitGrantApplication(event) {
+      event.preventDefault();
+      const randomNum = Math.floor(1000 + Math.random() * 9000);
+      const trackingId = `YEGW-2026-${randomNum}`;
+
+      document.getElementById("confirm-grant-name").textContent = currentModalGrant ? currentModalGrant.title : "Year-End Opportunity";
+      document.getElementById("confirm-tracking-id").textContent = trackingId;
+
+      document.getElementById("apply-form-container").classList.add("hidden");
+      document.getElementById("apply-confirmation-container").classList.remove("hidden");
+
+      showToast(`🎉 Application submitted! Tracking ID: ${trackingId}`, "emerald");
+    }
+
+    function copyTrackingId() {
+      const id = document.getElementById("confirm-tracking-id").textContent;
+      copyTextFallback(id);
+      showToast(`Copied ${id} to clipboard!`, "gold");
+    }
+
+    function openShareModal() {
+      const modal = document.getElementById("share-modal");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closeShareModal() {
+      const modal = document.getElementById("share-modal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    function handleNewResourceSubmit(event) {
+      event.preventDefault();
+      const title = document.getElementById("new-title").value.trim();
+      const funder = document.getElementById("new-funder").value.trim();
+      const amount = document.getElementById("new-amount").value.trim();
+      const geoVal = document.getElementById("new-geo").value;
+      const applicantVal = document.getElementById("new-applicant").value;
+      const supportVal = document.getElementById("new-support").value;
+      const summary = document.getElementById("new-summary").value.trim();
+
+      const newGrant = {
+        id: `g-${Date.now()}`,
+        title,
+        funder,
+        amount,
+        geo: [geoVal, "Global Rolling"],
+        geoLabel: `🌍 Worldwide • ${geoVal}`,
+        deadline: "Newly Shared • Rolling",
+        applicantTypes: [applicantVal],
+        supportTypes: [supportVal],
+        featuredPaparazzi: false,
+        summary,
+        eligibility: `Community-shared opportunity open worldwide to ${applicantVal}.`
+      };
+
+      grantsData.unshift(newGrant);
+      document.getElementById("share-resource-form").reset();
+      closeShareModal();
+      renderGrantsDirectory();
+      scrollToDirectory();
+      showToast("🌟 Thank you! Your shared worldwide resource is now live in the directory.", "gold");
+    }
+
+    // =========================================================================
+    // 8. UTILITIES (Toast & Clipboard)
+    // =========================================================================
+    function copyTextFallback(text) {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.style.position = "fixed";
+      textarea.style.opacity = "0";
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand("copy");
+      } catch (err) {
+        console.error("Copy failed", err);
+      }
+      document.body.removeChild(textarea);
+    }
+
+    function showToast(message, tone = "gold") {
+      const container = document.getElementById("toast-container");
+      const toast = document.createElement("div");
+
+      const borderColors = {
+        gold: "border-champagne-400/60 bg-evergreen-900/95 text-champagne-100",
+        emerald: "border-emerald-400/60 bg-evergreen-900/95 text-emerald-100",
+        crimson: "border-crimson-500/60 bg-evergreen-900/95 text-rose-100",
+        slate: "border-white/20 bg-evergreen-900/95 text-slate-200"
+      };
+
+      toast.className = `pointer-events-auto px-4 py-3 rounded-2xl border ${borderColors[tone] || borderColors.gold} shadow-2xl text-xs sm:text-sm font-medium backdrop-blur-md transition-all duration-300 transform translate-y-2 opacity-0`;
+      toast.textContent = message;
+      container.appendChild(toast);
+
+      requestAnimationFrame(() => {
+        toast.classList.remove("translate-y-2", "opacity-0");
+      });
+
+      setTimeout(() => {
+        toast.classList.add("opacity-0", "translate-y-2");
+        setTimeout(() => toast.remove(), 300);
+      }, 3600);
+    }
+
+    // =========================================================================
+    // 9. FESTIVE SNOW & CHAMPAGNE SPARKLE CANVAS ANIMATION
+    // =========================================================================
+    let snowEnabled = true;
+
+    function initSnowCanvas() {
+      const canvas = document.getElementById("snow-canvas");
+      const ctx = canvas.getContext("2d");
+      let width = (canvas.width = window.innerWidth);
+      let height = (canvas.height = window.innerHeight);
+
+      window.addEventListener("resize", () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      const particles = Array.from({ length: 55 }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        r: Math.random() * 2.4 + 0.8,
+        speedY: Math.random() * 0.7 + 0.25,
+        speedX: (Math.random() - 0.5) * 0.35,
+        isGold: Math.random() > 0.72,
+        alpha: Math.random() * 0.55 + 0.2
+      }));
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        if (snowEnabled) {
+          for (const p of particles) {
+            p.y += p.speedY;
+            p.x += p.speedX;
+            if (p.y > height) {
+              p.y = -5;
+              p.x = Math.random() * width;
+            }
+            if (p.x > width) p.x = 0;
+            if (p.x < 0) p.x = width;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = p.isGold
+              ? `rgba(241, 212, 126, ${p.alpha})`
+              : `rgba(255, 255, 255, ${p.alpha * 0.75})`;
+            ctx.fill();
+          }
+        }
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+
+      document.getElementById("toggle-snow-btn").addEventListener("click", (e) => {
+        snowEnabled = !snowEnabled;
+        const label = e.currentTarget.querySelector("span");
+        if (label) label.textContent = `Snow: ${snowEnabled ? "On" : "Off"}`;
+      });
+    }
+
+    // =========================================================================
+    // 10. INITIALIZE ON WINDOW LOAD
+    // =========================================================================
+    window.onload = function () {
+      renderPaparazziSpotlight();
+      renderQualifiedAndWinners();
+      renderTestimonials();
+      renderGrantsDirectory();
+      setupFilterListeners();
+      initSnowCanvas();
+    };
+  </script>
+</body>
+</html>
